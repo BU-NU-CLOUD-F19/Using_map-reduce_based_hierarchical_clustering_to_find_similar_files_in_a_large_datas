@@ -4,7 +4,7 @@
 
 ## 1.   Vision and Goals Of The Project:
 
-The current demands for datacenters is huge and storing backups can become a tedious task. Moving massive data in the production environment is both computationally and spatially expensive, to tackle this Dell's DDFS (Data Domain File System) provides deduplication that splits files into chunks. Hierarchical clustering would allow us to iteratively predict similarity in files with more confidence. Scaling our solution using map-reduce also enables us to perform deduplication on a multi-node distributed system.
+The current demands for datacenters are huge and storing backups can become a tedious task. Moving massive data in the production environment is both computationally and spatially expensive, to tackle this Dell's DDFS (Data Domain File System) provides deduplication that splits files into chunks. Hierarchical clustering would allow us to iteratively predict similarity in files with more confidence. Scaling our solution using map-reduce also enables us to perform deduplication on a multi-node distributed system.
 
 Our short term goal in this project is to develop a clustering algorithm that can potentially find similar files on a single node. Our efforts would be focused on finding techniques that can predict similarity in files, starting at minhash estimation of the Jaccard distance and further support linkage algorithms such as max/complete linkage, average linkage. We plan to extend this solution to a multi-node distributed system using map-reduce, allowing us to process larger datasets. 
 
@@ -78,7 +78,7 @@ We need to create files with similar data. There are a few “canonical” build
 * Chain of files with p% common data between adjacent files:
 F1, F2, F3, … such that Fi and Fj share p% of common data
 * A binary hierarchy relationship like this:
-<img src="/images/Hierarchy.PNG" width="300" height="300">
+<img src="/images/Hierarchy.PNG" width="400" height="400">
 
 Minhash Signature : Generate min hashes for the files created above.
 
